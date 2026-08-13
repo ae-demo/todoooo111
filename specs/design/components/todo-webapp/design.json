@@ -1,0 +1,45 @@
+{
+  "name": "todo-webapp",
+  "type": "web-application",
+  "version": "0.1.0",
+  "language": "TypeScript",
+  "buildpack": "docker",
+  "appPath": "todo-webapp",
+  "entrypoint": "deployment/web-application",
+  "exposure": "internet",
+  "stories": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "dependencies": [
+    {
+      "description": "Fetches and mutates the signed-in user's lists, memberships, invitations, and tasks.",
+      "kind": "component",
+      "name": "todo-api"
+    },
+    {
+      "description": "Signs the user in via OIDC + PKCE and supplies the access token attached to every todo-api call.",
+      "kind": "platform-resource",
+      "name": "user-auth",
+      "parameters": {
+        "scopes": "openid profile email"
+      },
+      "resourceType": "thunder-app"
+    }
+  ],
+  "description": "Single-page React app for the collaborative to-do list product: sign-in, list creation, invitation and membership management, and task CRUD with sort/filter by due date or priority. Talks only to todo-api; holds no direct database credentials.",
+  "skillsPinned": [
+    "wireframes",
+    "react-webapp",
+    "thunder-authentication"
+  ]
+}
