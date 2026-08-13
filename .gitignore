@@ -1,0 +1,4 @@
+# Ballerina (todo-api)
+todo-api/target/
+todo-api/generated/
+todo-api/Config.toml
