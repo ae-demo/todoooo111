@@ -1,0 +1,8 @@
+# Ballerina (todo-api)
+todo-api/target/
+todo-api/generated/
+todo-api/Config.toml
+
+# React webapp (todo-webapp)
+todo-webapp/node_modules/
+todo-webapp/dist/
